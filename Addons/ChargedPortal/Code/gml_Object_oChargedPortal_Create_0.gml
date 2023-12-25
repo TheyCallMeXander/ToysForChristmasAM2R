@@ -1,0 +1,9 @@
+targetroom = room
+targetx = 0
+targety = 0
+camstartx = 0
+camstarty = 0
+open = 0
+scale = 1
+type = 1
+maxsize = 3

@@ -1,0 +1,12 @@
+vSuit = 0
+gSuit = 1
+bothSuits = 2
+anySuit = 3
+eternal = 4
+type = vSuit
+heateffect = surface_create((320 + oControl.widescreen_space), 240)
+heatdamage = 0
+sound1 = 2
+sound2 = 1
+sfxtime = 0
+image_alpha = 0
