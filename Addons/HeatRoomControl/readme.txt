@@ -29,10 +29,12 @@ Assign RoomCC per oHeatRoomController you want, you can recycle the same RoomCC 
 
 -I want to add Eternal Hellrun-
 To add Eternal Hellrun, preferably under a toggleable variable, go to the characterStepEvent and add the following:
-{
+
 if (!(instance_exists(oHeatRoomController)))
+{
   var hrc = instance_create(x, y, oHeatRoomController)
-hrc.type = eternal
+  with hrc
+    type = eternal
 }
 
 Merry Christmas, from Xander.
