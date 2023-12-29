@@ -66,3 +66,11 @@ if (heatdamage > 0)
 }
 if (heatdamage == 0)
     sfxtime = 0
+with (oCharacter)
+{
+    if (global.playerhealth <= 0 && state != DEFEATED)
+    {
+        alarm[0] = 6
+        state = DEFEATED
+    }
+}
