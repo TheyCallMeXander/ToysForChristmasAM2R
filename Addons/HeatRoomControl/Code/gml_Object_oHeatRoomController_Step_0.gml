@@ -55,22 +55,27 @@ if (type == eternal)
 if (heatdamage > 0)
 {
     global.playerhealth -= heatdamage
-    sfxtime++
-    if (sfxtime >= 60)
+    if (type != eternal)
     {
-        sfx_play(sound2)
-        sfxtime = 0
-    }
+        sfxtime++
+        if (sfxtime >= 60)
+        {
+            sfx_play(sound2)
+            sfxtime = 0
+        }
+    
     if (!sfx_isplaying(sound1))
         sfx_play(sound1)
+    }
+    with (oCharacter)
+    {
+        if (global.playerhealth <= 0 && state != DEFEATED)
+        {
+            alarm[0] = 6
+            state = DEFEATED
+        }
+    }
 }
 if (heatdamage == 0)
     sfxtime = 0
-with (oCharacter)
-{
-    if (global.playerhealth <= 0 && state != DEFEATED)
-    {
-        alarm[0] = 6
-        state = DEFEATED
-    }
-}
+
